@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Studios | Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar-container">
+            <div class="logo"><a href="#"><img src="logo.png" alt="Sweet Studios Logo"></a></div>
+            <ul class="navbar">
+                <li><a href="#hero">Intro</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Shop</a></li>
+            </ul>
+            <div class="cart-container">
+                <p id="cart">🛒 <span id="cart-count">0</span></p>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="cart-header">
+                <p>S/N</p>
+                <p>Item</p>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p></p>
+            </div>
+
+            <div class="cart-items" id="cart-items"></div>
+
+            <form class="user-details" action="/save-order-and-pay" method="POST">
+                <input type="text" placeholder="Your Name" id="user-name">
+                <input type="email" placeholder="Your Email" id="email">
+                <input type="tel" placeholder="Your Phone Number" id="phone">
+            </form>
+
+            <div class="cart-footer">
+                <p class="total-label">Total Amount to be Paid</p>
+                <h3 class="total-price">GH₵<span id="total-price">0.00</span></h3>
+                <div class="footer-btns">
+                    <button id="continue-btn">Continue Shopping</button>
+                    <button id="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Thank you for your purchase. Your order has been placed successfully.</h2>
+            <img src="success.png" alt="Success">
+
+            <h2>Summary</h2>
+
+            <div class="cart-header">
+                <p>S/N</p>
+                <p>Item</p>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p></p>
+            </div>
+            
+            <div class="cart-items" id="cart-items"></div>
+
+        </div>
+    </div>
+
+    <section class="hero" id="hero">
+        <div class="hero-text">
+            <h1>SWEET<br>STUDIOS<br>STORE</h1>
+            <a href="#products" class="shop-now">Shop Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="accessories.png" alt="phone with gadgets">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Sweet Studios, your one-stop shop for the latest and greatest in tech accessories. We offer a wide
+            range of products to enhance your digital lifestyle.</p>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="ps5.png" alt="PlayStation 5">
+                <h3>PlayStation 5</h3>
+                <p class="price">GH₵ 19.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="controller.png" alt="PlayStation 5 Controller">
+                <h3>PlayStation 5 Controller</h3>
+                <p class="price">GH₵ 39.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="headphone.png" alt="Headphones">
+                <h3>Headphones</h3>
+                <p class="price">GH₵ 49.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="iphone-18-pro.png" alt="iPhone 18 Pro">
+                <h3>iPhone 18 Pro</h3>
+                <p class="price">GH₵ 99.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="Apple-TV-4K.png" alt="Apple TV 4K">
+                <h3>Apple TV 4K</h3>
+                <p class="price">GH₵ 29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="macbook-air.png" alt="MacBook Air">
+                <h3>MacBook Air</h3>
+                <p class="price">GH₵ 199.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sweet Studios. All rights reserved.</p>
+    </footer>
+
+        <script src="https://js.paystack.co/v2/inline.js"> </script>
+        <script src="script.js"></script>
+</body>
+
+</html>
